@@ -24,6 +24,10 @@ def execute(language, question, binary_code):
         file_name='q1' + ext
     if question==QuestionChoice.q2:
         file_name='q2' + ext
+    if question==QuestionChoice.q3:
+        file_name='q3' + ext
+    if question==QuestionChoice.q4:
+        file_name='q4' + ext
 
     with open(os.path.join(path,file_name),"rb") as template_file:
         template = template_file.read()

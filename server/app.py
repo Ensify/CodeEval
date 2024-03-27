@@ -34,5 +34,9 @@ def submit(
     return result
 
 @app.post("/result")
-def result():
-    return FileResponse('results.csv')
+def result(
+    password: str = Form(...)
+):
+    if password == "solla maaten":
+        return FileResponse('results.csv')
+    return "You are Not authorized"
